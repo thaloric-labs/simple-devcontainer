@@ -2,5 +2,5 @@
   "name": "agents",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 
-  "postCreateCommand": "curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash - && sudo apt-get update && sudo apt-get install -y nodejs && npm config set prefix ~/.npm-global && npm install -g @anthropic-ai/claude-code @openai/codex @google/gemini-cli && echo 'export PATH=$HOME/.npm-global/bin:$PATH' >> ~/.bashrc"
+  "postCreateCommand": "curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash - && sudo apt-get update && sudo apt-get install -y nodejs && npm config set prefix ~/.npm-global && npm install -g @anthropic-ai/claude-code @openai/codex && curl -fsSL https://antigravity.google/cli/install.sh | bash && echo 'export PATH=$HOME/.local/bin:$HOME/.npm-global/bin:$PATH' >> ~/.bashrc"
 }
